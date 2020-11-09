@@ -118,7 +118,7 @@ class SdLBFGS(Optimizer):
 
         # evaluate initial f(x) and df/dx
         orig_loss = closure()
-        loss = orig_loss.data[0]
+        loss = orig_loss.item()
         current_evals = 1
         state['func_evals'] += 1
 
